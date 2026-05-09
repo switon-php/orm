@@ -37,6 +37,11 @@
     "switon/testing": "^1.0",
     "phpunit/phpunit": "^12.0"
   },
+  "config": {
+    "allow-plugins": {
+      "switon/composer-extra": true
+    }
+  },
   "suggest": {
     "switon/orm-codegen": "Development: entity:make and repository scaffolding from database metadata"
   },
