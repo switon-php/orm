@@ -1,0 +1,52 @@
+{
+  "name": "switon/orm",
+  "description": "Data mapping, repositories, and persistence for Switon Framework",
+  "type": "library",
+  "keywords": [
+    "switon",
+    "orm",
+    "database",
+    "repositories"
+  ],
+  "homepage": "https://github.com/switon-php/orm",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "switon",
+      "email": "admin@switon.dev"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/switon-php/orm",
+    "issues": "https://github.com/switon-php/orm/issues",
+    "docs": "https://docs.switon.dev/latest/orm"
+  },
+  "require": {
+    "php": ">=8.3",
+    "switon/core": "^1.0",
+    "switon/db": "^1.0",
+    "switon/di": "^1.0",
+    "switon/event": "^1.0",
+    "switon/id": "^1.0",
+    "switon/query": "^1.0",
+    "switon/sharding": "^1.0",
+    "switon/validation": "^1.0"
+  },
+  "require-dev": {
+    "switon/invoker": "^1.0",
+    "switon/testing": "^1.0"
+  },
+  "suggest": {
+    "switon/orm-codegen": "Development: entity:make and repository scaffolding from database metadata"
+  },
+  "autoload": {
+    "psr-4": {
+      "Switon\\Orm\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Switon\\Orm\\Tests\\": "tests/"
+    }
+  }
+}
