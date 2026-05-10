@@ -24,6 +24,7 @@
   },
   "require": {
     "php": ">=8.3",
+    "switon/binding": "^1.0",
     "switon/core": "^1.0",
     "switon/db": "^1.0",
     "switon/di": "^1.0",
