@@ -31,6 +31,7 @@
     "switon/di": "^1.0",
     "switon/event": "^1.0",
     "switon/id": "^1.0",
+    "switon/principal": "^1.0",
     "switon/query": "^1.0",
     "switon/sharding": "^1.0",
     "switon/validation": "^1.0"
