@@ -1,0 +1,21 @@
+services:
+    -
+        class: Switon\Orm\PhpStan\QueryBuilderCreateMethodReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Switon\Orm\PhpStan\AbstractQueryPaginateReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Switon\Orm\PhpStan\EntityMetadataGetRepositoryMethodReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Switon\Orm\PhpStan\EntityMetadataCreateQueryMethodReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension
+    -
+        class: Switon\Orm\PhpStan\AbstractRepositoryMethodReturnTypeExtension
+        tags:
+            - phpstan.broker.dynamicMethodReturnTypeExtension

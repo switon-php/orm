@@ -1,0 +1,80 @@
+{
+    "name": "switon/orm",
+    "description": "Typed entities, repository-first persistence, relation loading, and shard-aware routing for Switon Framework",
+    "type": "library",
+    "keywords": [
+        "switon",
+        "orm",
+        "mapping",
+        "database",
+        "repositories",
+        "entities"
+    ],
+    "homepage": "https://github.com/switon-php/orm",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "switon",
+            "email": "admin@switon.dev"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/switon-php/orm",
+        "issues": "https://github.com/switon-php/orm/issues",
+        "docs": "https://docs.switon.dev/latest/orm"
+    },
+    "require": {
+        "php": ">=8.3",
+        "switon/binding": "^1.0",
+        "switon/core": "^1.0",
+        "switon/db": "^1.0",
+        "switon/di": "^1.0",
+        "switon/event": "^1.0",
+        "switon/id": "^1.0",
+        "switon/invocation": "^1.0",
+        "switon/principal": "^1.0",
+        "switon/query": "^1.0",
+        "switon/sharding": "^1.0",
+        "switon/validation": "^1.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.0",
+        "switon/invoker": "^1.0",
+        "switon/testing": "^1.0",
+        "phpstan/extension-installer": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "switon/composer-extra": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "suggest": {
+        "switon/orm-codegen": "Development: entity:make and repository scaffolding from database metadata"
+    },
+    "autoload": {
+        "psr-4": {
+            "Switon\\Orm\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Switon\\Orm\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "@php vendor/bin/phpstan analyse",
+        "test:unit": "@php vendor/bin/phpunit --configuration tests/phpunit.xml.dist --testsuite=unit --display-deprecations --display-phpunit-notices",
+        "test": "@php vendor/bin/phpunit --configuration tests/phpunit.xml.dist --testsuite=all --display-deprecations --display-phpunit-notices"
+    },
+    "extra": {
+        "phpstan": {
+            "includes": [
+                "phpstan-extension.neon"
+            ]
+        },
+        "branch-alias": {
+            "dev-dev": "1.0.x-dev"
+        }
+    }
+}

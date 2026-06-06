@@ -1,0 +1,44 @@
+includes:
+    - phpstan-extension.neon
+
+parameters:
+    level: 7
+    bootstrapFiles:
+        - phpstan-bootstrap.php
+    paths:
+        - src
+    excludePaths:
+        analyse:
+            - src/PhpStan
+    tmpDir: tests/.phpstan.cache
+    ignoreErrors:
+        -
+            message: '~Switon\\Orm\\EntityHydrator::hydrateEnumValue\(\) should return UnitEnum but returns object~'
+        -
+            message: '~Call to an undefined static method DateTimeInterface::createFromFormat\(\)~'
+        -
+            identifier: missingType.iterableValue
+            path: src/Event/RelationDataInconsistency.php
+        -
+            identifier: missingType.iterableValue
+            path: src/IdGeneratorInterface.php
+        -
+            identifier: argument.type
+            path: src/IdGenerator.php
+        -
+            identifier: trait.unused
+            path: src/JunctionRepositoryTrait.php
+        -
+            identifier: return.unusedType
+            path: src/PhpStan/EntityMetadataCreateQueryMethodReturnTypeExtension.php
+        -
+            identifier: argument.type
+            message: '~expects class-string<Switon\\Orm\\Entity>, string given~'
+            path: src/Relation/
+        -
+            identifier: return.type
+            path: src/AbstractRepository.php
+        -
+            identifier: argument.type
+            path: src/Attribute/
+            message: '~Parameter #2 \$parameters of method Switon\\Core\\MakerInterface::make\(\) expects array<string, mixed>~'
